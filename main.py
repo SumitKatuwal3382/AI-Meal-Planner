@@ -2,13 +2,13 @@
 # Import All the Required Libraries
 import streamlit as st
 import json
-from dotenv import load_dotenv
+import os
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 import os
 
-# Setup the Environment
-load_dotenv()
+# Set GROQ API key from Streamlit secrets
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 # Initialize and load the Llama 3.3 Model with API key from environment
 api_key = os.getenv("GROQ_API_KEY")
