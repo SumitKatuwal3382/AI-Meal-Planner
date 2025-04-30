@@ -1,0 +1,102 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Merriweather:wght@700&display=swap');
+
+/* Global styles */
+body, * {
+    font-family: 'Poppins', sans-serif !important;
+    color: #2D3748; /* Dark gray for text */
+}
+
+/* Gradient background */
+body {
+    background: linear-gradient(135deg, #E6F0FA 0%, #F9EBC8 100%);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Center content */
+div.stApp {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Headers */
+h1, .stTitle {
+    font-family: 'Merriweather', serif !important;
+    color: #1A4971; /* Deep blue for headers */
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2, .stSubheader {
+    font-family: 'Merriweather', serif !important;
+    color: #1A4971;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+/* Widget labels and inputs */
+.stSlider label, .stSelectbox label, .stRadio label, .stNumberInput label {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1rem;
+    color: #2D3748;
+    font-weight: 500;
+}
+.stSlider > div, .stSelectbox > div, .stRadio > div, .stNumberInput > div {
+    background: #F7FAFC;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Button styling */
+button[kind="primary"] {
+    background-color: #1A4971;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+button[kind="primary"]:hover {
+    background-color: #2B6CB0;
+}
+
+/* Meal plan text */
+.stMarkdown p, .stMarkdown li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2D3748;
+}
+.stMarkdown strong {
+    color: #1A4971;
+    font-weight: 700;
+}
+
+/* Text area for JSON output */
+.stTextArea textarea {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid #CBD5E0;
+    background: #F7FAFC;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1, .stTitle {
+        font-size: 2rem;
+    }
+    h2, .stSubheader {
+        font-size: 1.5rem;
+    }
+    div.stApp {
+        padding: 15px;
+    }
+}
