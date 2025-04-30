@@ -1,15 +1,22 @@
+
 # Import All the Required Libraries
 import streamlit as st
 import json
 from dotenv import load_dotenv
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
+import os
 
 # Setup the Environment
 load_dotenv()
 
-# Initialize and load the Llama 3.3 Model
-llm = ChatGroq(model="llama-3.3-70b-versatile")
+# Initialize and load the Llama 3.3 Model with API key from environment
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    st.error("GROQ_API_KEY not found in environment variables. Please set it in Streamlit Cloud secrets.")
+    st.stop()
+
+llm = ChatGroq(model="llama-3.3-70b-versatile", api_key=api_key)
 
 # Define the function to load custom CSS
 def load_css(file_name):
